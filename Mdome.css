@@ -106,6 +106,9 @@ button:active,.equlizer button:active{
     background-color: aliceblue;
     font-weight: bolder;
 }
+#musicname,#Logo,#emoji{
+    margin:3px 5px 3px 5px ;
+}
 #equilizer{
     width:50%;
     height:fit-content;
