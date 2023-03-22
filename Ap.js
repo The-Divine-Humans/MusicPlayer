@@ -151,7 +151,7 @@ seekbar.addEventListener("input",e => {
     
 })
 ///////////////////////////////////////////////////////////////////
-/////////////////--------Duration-----------////////////////////
+/////////////////--------Duration-----------///////////////////////
 
 audio.addEventListener("loadeddata",()=>{
     totalTimeElement.textContent=formatDuration(audio.duration)

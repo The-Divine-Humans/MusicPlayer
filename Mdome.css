@@ -96,6 +96,7 @@ button:active,.equlizer button:active{
     color: rgb(0, 0, 0);
     font-size: 20px;
     cursor: pointer;
+    padding:2%;
 }
 #music:hover{
     border: 1px solid blue;
