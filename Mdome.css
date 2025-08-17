@@ -343,11 +343,15 @@ hr{
         display:none;
         position: absolute;
         margin:1%;
+        padding: 1%;
         width:90%;
         height:70vh;
         background-color: rgb(161, 235, 255);
         z-index: 5;
 
+    }
+    #music{
+        width:92%
     }
     #playlistbutton{
         display:block;
