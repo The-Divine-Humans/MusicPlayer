@@ -139,31 +139,26 @@ vol.addEventListener("input",e =>{
 volvalue.addEventListener("click",toggleMute)
 
 function toggleMute(){
-
-    audio.muted=!audio.muted
-
-    if(audio.muted==true || audio.volume==0){
+   audio.muted=!audio.muted
+   if(audio.muted==true || audio.volume==0)
+   {
+        vol.value="0"
         volval.innerHTML="Muted"
         volvalue.innerHTML="volume_off"
         volvalue.title="Click to Unmute"
    }
-
-    else{ if (audio.volume!=0 && (vol.val>0 && vol.val<=66)){
+       else if ( (volval>0 && volval<=66)){
 
         volval.innerHTML=Math.round((Video.volume)*100);
-        vol.value=Math.round((audio.volume)*100)
         volvalue.innerHTML="volume_down"
         volvalue.title="Click to Mute"
     }
-    else
-   {
-
+   else{
         volval.innerHTML=Math.round((audio.volume)*100)
         vol.value=Math.round((audio.volume)*100)
         volvalue.innerHTML="volume_up"
-        volvalue.title="Click to Mute" 
-   } }
-    
+        volvalue.title="Click to Mute"
+   }
 }
 
 // volvalue.addEventListener("click",()=>{
@@ -333,3 +328,4 @@ document.addEventListener("keydown", e =>{
 })
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////
+
