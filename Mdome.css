@@ -300,6 +300,12 @@ hr{
     height:2em;  
 }
 @media screen and (max-width:700px){
+
+        *{
+        font-size: 12px;
+        padding: 0;
+        margin: 0;
+    }
     #timer{
         border-radius: 5px;
     }
@@ -315,11 +321,7 @@ hr{
         'opsz' 10;
         text-align: center;
       }
-    *{
-        font-size: 12px;
-        padding: 0;
-        margin:0;
-    }
+   
     body{
         text-align: center;
     }
@@ -343,8 +345,6 @@ hr{
         margin:1%;
         width:90%;
         height:70vh;
-        align-self: center;
-        justify-self:center;
         background-color: rgb(161, 235, 255);
         z-index: 5;
 
@@ -370,14 +370,17 @@ hr{
         width:98%;
         height:fit-content;
         align-self: center;
+        justify-self:flex-end;
         padding:0.5%;
         overflow: hidden;
         margin:5% 1% 5% 1% ;
+        justify-self: center;
+        padding: 0.5%;
     }
     #equilizer img{
         border-radius: 20px;
         width:96vw;
-        height:40vh;
+        height:64.5vh;
     }
     #progress{
         width:95%;
@@ -534,5 +537,4 @@ hr{
         background-color: rgba(110, 214, 255, 0.5);
         border-radius: 0 3px 3px 0;
     }
-
 } */
