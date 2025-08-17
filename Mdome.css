@@ -317,13 +317,15 @@ hr{
       }
     *{
         font-size: 12px;
+        padding: 0;
+        margin:0;
     }
     body{
         text-align: center;
     }
     #musicdiv{
-        width:98%;
-        height:75vh;
+        width:100%;
+        height:90vh;
         background: url(images/musicDbg.jfif);
     }
     ::-webkit-scrollbar,::-webkit-scrollbar-track{
@@ -333,15 +335,16 @@ hr{
     #musicbox{
         display:flex;
         flex-direction: column;
-        height: 75vh;
+        height: 90vh;
     }
     #playlistbox{
         display:none;
         position: absolute;
         margin:1%;
         width:90%;
-        height:40vh;
-        left:5%;
+        height:70vh;
+        align-self: center;
+        justify-self:center;
         background-color: rgb(161, 235, 255);
         z-index: 5;
 
@@ -369,7 +372,7 @@ hr{
         align-self: center;
         padding:0.5%;
         overflow: hidden;
-        margin:1% 0.5% 1% 0.5% ;
+        margin:5% 1% 5% 1% ;
     }
     #equilizer img{
         border-radius: 20px;
@@ -531,4 +534,5 @@ hr{
         background-color: rgba(110, 214, 255, 0.5);
         border-radius: 0 3px 3px 0;
     }
+
 } */
