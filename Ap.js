@@ -113,6 +113,39 @@ function changesource(){
 /////////////////////////////////////////////////////////////////
 ///////////////////////----Volume----////////////////////////////
 
+volvalue.addEventListener("click",toggleMute)
+
+function toggleMute(){
+
+    audio.muted=!audio.muted
+
+        if(audio.muted==true || audio.volume==0)
+    {
+
+        volvalue.innerHTML="volume_off"
+        volvalue.title="Click to Unmute"
+        volval.innerHTML="0";
+        vol.value="0"
+
+    }
+
+    else if ((audio.volume>0 && audio.volume<=0.66)){
+
+        volval.innerHTML=Math.round((audio.volume)*100);
+        vol.value=Math.round((audio.volume)*100)
+        volvalue.innerHTML="volume_down"
+        volvalue.title="Click to Mute"
+    }
+    else{
+
+        volval.innerHTML=Math.round((audio.volume)*100)
+        vol.value=Math.round((audio.volume)*100)
+        volvalue.innerHTML="volume_up"
+        volvalue.title="Click to Mute" 
+     } 
+    
+    
+}
 vol.addEventListener("input",e =>{
     audio.volume=(e.target.value)/100
     audio.muted=e.target.value===0
@@ -136,50 +169,7 @@ vol.addEventListener("input",e =>{
    }
 })
 
-volvalue.addEventListener("click",toggleMute)
 
-function toggleMute(){
-   audio.muted=!audio.muted
-   if(audio.muted==true || audio.volume==0)
-   {
-        vol.value="0"
-        volval.innerHTML="Muted"
-        volvalue.innerHTML="volume_off"
-        volvalue.title="Click to Unmute"
-   }
-       else if ( (volval>0 && volval<=66)){
-
-        volval.innerHTML=Math.round((Video.volume)*100);
-        volvalue.innerHTML="volume_down"
-        volvalue.title="Click to Mute"
-    }
-   else{
-        volval.innerHTML=Math.round((audio.volume)*100)
-        vol.value=Math.round((audio.volume)*100)
-        volvalue.innerHTML="volume_up"
-        volvalue.title="Click to Mute"
-   }
-}
-
-// volvalue.addEventListener("click",()=>{
-//     if(vol.value==0 || volval==0){
-//         volval.innerHTML="Muted"
-//         volvalue.innerHTML="volume_off"
-//         volvalue.title="Click to Unmute"
-//     }
-//     else if ( vol.value>0 && vol.value<=66){
-
-//         volval.innerHTML=Math.round((audio.volume)*100);
-//         volvalue.innerHTML="volume_down"
-//         volvalue.title="Click to Mute"
-//     }
-//     else{
-        
-//         volval.innerHTML=Math.round((audio.volume)*100);
-//         volvalue.innerHTML="volume_up"
-//         volvalue.title="Click to Mute"
-//    }
-// })
 
 function volpm(vvalue){
     
@@ -328,4 +318,3 @@ document.addEventListener("keydown", e =>{
 })
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////
-
